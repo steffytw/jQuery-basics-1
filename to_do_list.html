@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TO DO List</title>
+
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			
+			$("#add").click(function () {
+				var dataInput=$("#fruits").val();
+				$("#demo").append("<li><p>"+dataInput+"</p><button id='del' onClick='deleteData(this)'>del</button><button id= 'edit' onClick='editData(this)'>edit</button></li>");
+				
+
+			});
+			
+		});
+		function deleteData(dataInput) {
+				$(dataInput).parent().remove();
+			}
+		function editData(data){
+			var edit=$(data).parent().find('p').text();
+			$('#fruits').val(edit);
+			
+		}
+
+
+	</script>
+</head>
+<body>
+	
+
+		<label>Fruits:</label>
+		<input type="text" id="fruits">
+		<button id="add">add</button>
+
+
+<div id="demo"></div>
+	
+	
+
+</body>
+</html>

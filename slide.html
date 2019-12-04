@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery fade in/out/to/toggle</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+	$(document).ready(function () {
+		$("#slideup").click(function(){
+			$("p").slideUp();
+		});
+		$("#slidedown").click(function(){
+			$("p").slideDown();
+		});
+		$("#slidetoggle").click(function(){
+			$("p").slideToggle();
+		});
+		
+	});
+	
+</script>
+</head>
+<body>
+
+	<p>This is my first paagraph</p>
+	<button id="slideup">slideUp</button>
+	<button id="slidedown">slideDown</button>
+	<button id="slidetoggle">slideToggle</button>
+	
+
+
+
+</body>
+</html>

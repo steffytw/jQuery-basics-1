@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+	$(document).ready(function () {
+		$("p").on({
+			mouseenter:function() {
+				$(this).css("background-color","blue");
+			},
+			mouseleave:function() {
+				$(this).css("background-color","yellow");
+			},
+			click:function() {
+				$(this).css("background-color","red");
+			}
+		});
+			
+		
+	});
+		
+	
+</script>
+</head>
+<body>
+
+	<h1>Welcome to my first webpage</h1>
+	<p>This is my first paagraph</p>
+
+
+
+
+</body>
+</html>

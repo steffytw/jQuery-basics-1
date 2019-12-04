@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+	$(document).ready(function () {
+		$("#first").click(function(){
+			$("ul li:first").hide();
+		})
+		$("#first-child").click(function(){
+			$("ul li:first-child").hide();
+		})
+	});
+	
+</script>
+</head>
+<body>
+
+	<!-- <p>This is my first parragraph
+		<p>This is inside my first paragraph</p>
+		<h2>first paragraph</h2>
+	</p>
+	<p>This is my second paragraph
+		<h2>second paragraph</h2>
+	</p>
+	<p>This is my third paragraph
+		<h2>third paragraph</h2>
+	</p>
+	<p>This is my fourth paragraph
+		<h2>fourth paragraph</h2>
+	</p> -->
+	<ul>
+		<li>jjh</li>
+		<li>helloo</li>
+	</ul>
+	<ul>
+		<li>jjh</li>
+		<li>helloo</li>
+	</ul>
+	<button id="first">first</button>
+	<button id="first-child">first child</button>
+
+
+</body>
+</html>

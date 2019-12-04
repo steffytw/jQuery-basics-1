@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+	$(document).ready(function () {
+		$("#animatehieght").click(function(){
+			$(".demo1").animate({height: "300px"});
+		})
+		$("#animatewidth").click(function(){
+			$(".demo1").animate({width: "300px"});
+		})
+	});
+	
+</script>
+</head>
+<body>
+
+	<div class="demo1" style="background-color: yellow">
+		
+	</div>
+	
+
+	<button id="animatehieght">animate hieght</button>
+	<button id="animatewidth">animatewidth</button>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Traffic Light</title>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var red=setInterval(redBlink,4000);
+			var yellow=setInterval(yellowBlink,6000);
+			var green=setInterval(greenBlink,7000);
+			
+			function redBlink(){
+
+				$("#red").css("opacity","1");
+				$("#yellow").css("opacity","0.1");
+				$("#green").css("opacity","0.1");
+			}
+			
+			function yellowBlink(){
+
+				$("#yellow").css("opacity","1");
+				$("#red").css("opacity","0.1");
+				$("#green").css("opacity","0.1");
+			}
+			
+			function greenBlink(){
+
+				$("#green").css("opacity","1");
+				$("#red").css("opacity","0.1");
+				$("#yellow").css("opacity","0.1");
+
+			}
+
+		});
+
+	</script>
+	<style type="text/css">
+		.main{
+			margin-left: 300px;
+			border: 20px;
+			height: 200px;
+			width: 50px;
+		}
+		#red,#green,#yellow{
+			border: none;
+			border-radius: 50%;
+			padding: 20px;
+			display: inline-block;
+			margin: 4px 2px;
+
+		}
+	</style>
+
+</head>
+<body>
+	<div class="main" align="center" style="background-color: black">
+		<center>
+		<div id="red" style="background-color: red"></div>
+		<div id="yellow" style="background-color: yellow"></div>
+		<div id="green" style="background-color: green"></div>
+		</center>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery fade in/out/to/toggle</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script>
+	$(document).ready(function () {
+		$("#fadein").click(function(){
+			$("p").fadeIn();
+		});
+		$("#fadeout").click(function(){
+			$("p").fadeOut();
+		});
+		$("#fadeto").click(function(){
+			$("p").fadeTo(3000,0.5);
+		});
+		$("#fadetoggle").click(function(){
+			$("p").fadeToggle();
+		});
+	});
+	
+</script>
+</head>
+<body>
+
+	<p>This is my first paagraph</p>
+	<button id="fadein">fadeIn</button>
+	<button id="fadeout">fadeOut</button>
+	<button id="fadeto">fadeTo</button>
+	<button id="fadetoggle">fadeToggle</button>
+
+
+
+</body>
+</html>
