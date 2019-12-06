@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX</title>
+
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			
+			$("#btn").click(function () {
+				$.getJSON("result.json",function (data) {
+					$("#view").html("Name :"+data.Name +"<br>");
+					$("#view").append("Age :"+data.Age);
+				})
+				
+			});
+			
+		});
+		
+	</script>
+</head>
+<body>
+	<div id="new">
+
+		<h1 style="font-family: 50px">Ajax</h1>
+		<input type="text" id="name">
+		<button id="btn">click</button>
+	</div>
+	<hr style="background-color: cyan">
+	<div id="view"></div>
+	
+
+
+
+
+</body>
+</html>

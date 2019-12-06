@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX POST METHOD</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+				$("#myForm").submit(function (prevent) {
+					prevent.preventDefault();
+					var r=$("#input").val();
+					$.post("http://192.168.1.250/ajax/post.php",{"staffID":r},function(data) {
+					
+							$("#myTableBody").append("<tr><td>"+data["data"]["StaffID"]+"</td><td>"+data["data"]["Name"]+"</td><td>"+data["data"]["Position"]+"</td><td>"+data["data"]["Office"]+"</td><td>"+data["data"]["Age"]+"</td><td>"+data["data"]["Start_date"]+"</td><td>"+data["data"]["Salary"]+"</td></tr>");
+						
+					
+					});
+				});
+			
+		});
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<input type="text" id="input">
+		<button type="submit" id="search">search</button>
+		
+	</form>
+	<hr>
+	<table id="myTable" style="border: 1px solid black">
+		<thead style="border: 1px solid black;color: blue">
+			<th style="border: 1px solid black">StaffID</th> 
+			<th style="border: 1px solid black">Name</th>
+			<th style="border: 1px solid black">Position</th>
+			<th style="border: 1px solid black">Office</th>
+			<th style="border: 1px solid black">Age</th>
+			<th style="border: 1px solid black">Start_date</th>
+			<th style="border: 1px solid black">Salary</th>
+		</thead>
+		<tbody id="myTableBody" style="border: 1px solid black">
+			
+		</tbody>
+	</table>
+	
+
+
+</body>
+</html>

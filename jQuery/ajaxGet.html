@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX GET METHOD</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$.get("http://192.168.1.250/ajax/get.php",function (data) {
+				for (var i = 0; i <=9; i++) {
+					
+					$("#myTableBody").append("<tr><td>"+data["data"][i]["StaffID"]+"</td><td>"+data["data"][i]["Name"]+"</td><td>"+data["data"][i]["Position"]+"</td><td>"+data["data"][i]["Office"]+"</td><td>"+data["data"][i]["Age"]+"</td><td>"+data["data"][i]["Start_date"]+"</td><td>"+data["data"][i]["Salary"]+"</td></tr>");
+				}
+			})
+		});
+		
+	</script>
+</head>
+<body>
+	<table id="myTable" style="border: 1px solid black">
+		<thead style="border: 1px solid black;color: blue">
+			<th style="border: 1px solid black">StaffID</th> 
+			<th style="border: 1px solid black">Name</th>
+			<th style="border: 1px solid black">Position</th>
+			<th style="border: 1px solid black">Office</th>
+			<th style="border: 1px solid black">Age</th>
+			<th style="border: 1px solid black">Start_date</th>
+			<th style="border: 1px solid black">Salary</th>
+		</thead>
+		<tbody id="myTableBody" style="border: 1px solid black">
+			
+		</tbody>
+	</table>
+
+</body>
+</html>

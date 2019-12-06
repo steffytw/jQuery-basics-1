@@ -10,10 +10,10 @@
 			
 			$("#add").click(function () {
 				var dataInput=$("#fruits").val();
-				$("#demo").append("<li><p>"+dataInput+"</p><button id='del' onClick='deleteData(this)'>del</button><button id= 'edit' onClick='editData(this)'>edit</button></li>");
+				$("#unorderedList").append("<li><p>"+dataInput+"</p><button id='del' onClick='deleteData(this)'>del</button><button id= 'edit' onClick='editData(this)'>edit</button></li>");
 				
 
-			});
+			});$("#add").val("");
 			
 		});
 		function deleteData(dataInput) {
@@ -22,6 +22,14 @@
 		function editData(data){
 			var edit=$(data).parent().find('p').text();
 			$('#fruits').val(edit);
+			$("#add").hide();
+			var temp= edit;
+			$('#fruits').after("<button id='update'>update</button>");
+
+
+
+
+
 			
 		}
 
@@ -29,14 +37,19 @@
 	</script>
 </head>
 <body>
-	
+	<div id="header"  style="background-color: blue;height: 50px;width: 500px;color: white;margin-left: 400px;margin-top: 50px">
+		<label>   Fruits:</label>
+		<input type="text" id="fruits" >
+		<button id="add" style="background-color: green">add</button>
+		<div id="demo" style="background-color: yellow;color: red;border: 10px">
+			<ol id="unorderedList">
 
-		<label>Fruits:</label>
-		<input type="text" id="fruits">
-		<button id="add">add</button>
+			</ol>
+		</div>
+	</div>
 
+		
 
-<div id="demo"></div>
 	
 	
 
